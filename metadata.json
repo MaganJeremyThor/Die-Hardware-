@@ -1,0 +1,6 @@
+{
+  "name": "Die Hardware",
+  "description": "Windows 10 & 11 hardware telemetry, GPU overclocking, AI render inspection, RAM BIOS tuning, organized CSV logging, and gaming optimizer by Carolina Blocks Studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

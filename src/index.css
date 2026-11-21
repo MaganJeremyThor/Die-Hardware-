@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Chakra Petch', sans-serif;
+    --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #07090e;
+    color: #e6edf7;
+    letter-spacing: 0.01em;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle 80s retro aerospace oscilloscope micro-grid */
+.flight-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(30, 41, 59, 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.28) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Crisp custom scrollbars matching Windows dark flight-deck chrome */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3b54;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
